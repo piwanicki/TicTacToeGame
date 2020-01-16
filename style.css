@@ -1,5 +1,5 @@
 body {
-  /* font-family: "Indie Flower", cursive; */
+  font-family: "Indie Flower", cursive;
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
@@ -14,7 +14,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 105vh;
+  min-height: 115vh;
 }
 
 * {
@@ -36,8 +36,8 @@ header h1 {
 
 .container {
   margin-left: 20vw;
-  margin-top: 40px;
-  top: 50%;
+  margin-bottom: 40px;
+  top: 0;
   width: 60%;
   height: 700px;
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
