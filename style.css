@@ -1,5 +1,5 @@
 body {
-  font-family: "Indie Flower", cursive;
+  /* font-family: "Indie Flower", cursive; */
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
@@ -8,13 +8,13 @@ body {
 
 .background {
   margin: 0;
-  background-image: url(images/blat.jpg);
+  background-image: url(images/background3.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 105vh;
 }
 
 * {
@@ -30,7 +30,8 @@ header h1 {
   font-size: 60px;
   font-style: italic;
   text-align: center;
-  color: rgba(26, 26, 26, 0.726);
+  /* color: rgba(26, 26, 26, 0.726); */
+  color: rgba(255, 255, 255, 0.712);
 }
 
 .container {
@@ -205,6 +206,210 @@ header h1 {
   100% {
     text-shadow: 0.25em 0 0 rgb(58, 58, 58), 0.5em 0 0 rgb(58, 58, 58);
   }
+}
+
+/* FOOTER */
+
+.Footer {
+  color: antiquewhite;
+  height: 190px;
+  width: 100vw;
+  padding: 0;
+  display: block;
+  left: 0;
+  transition: transform 1s, visibility 2s;
+  background-image: linear-gradient(grey, black);
+}
+
+.Footer div {
+  display: inline-block;
+  vertical-align: top;
+  /* height: 100%; */
+}
+
+.YandexAdnotation {
+  float: left;
+  padding-top: 150px;
+  color: whitesmoke;
+  margin-left: 20px;
+}
+
+.Footer ul {
+  list-style: none;
+  padding: 10px 10px;
+  margin: 0;
+}
+
+.Footer li {
+  padding: 5px 0;
+  white-space: nowrap;
+  width: auto;
+}
+
+.InfoSection {
+  margin-top: 20px;
+  margin-left: 75%;
+  height: 150px;
+}
+
+.QuickNav {
+  margin-left: 60px;
+  margin-top: 20px;
+  height: 150px;
+}
+
+.GitIcon {
+  color: white;
+  font-size: 30px;
+}
+
+.GitIcon:hover {
+  color: grey;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+
+.ContactIcon {
+  transition: transform 0.5s;
+}
+
+.ContactIcon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+li p {
+  font-size: 10px;
+  color: whitesmoke;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+li p:hover {
+  color: rgb(224, 216, 216);
+}
+
+li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active,
+a:visited,
+a:hover {
+  color: inherit;
+}
+
+h4 {
+  margin: 8px 10px;
+  color: rgba(245, 245, 245, 0.795);
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+}
+
+.Hidden {
+  visibility: hidden;
+}
+
+.Close {
+  transform: translateY(38vh);
+  /* visibility: hidden; */
+}
+
+.Open {
+  transform: translateY(-25vh);
+}
+
+.OpenFooter {
+  font-size: 55px;
+  text-align: center;
+  color: black;
+  margin-left: 80vw;
+  margin-bottom: 10%;
+}
+
+.FooterContainer {
+  position: absolute;
+  /* top: 970px; */
+  left: 0;
+}
+
+@media only screen and (min-width: 401px) {
+  .OpenFooter {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1300px) {
+  .InfoSection {
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .InfoSection {
+    margin-left: 40%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .InfoSection {
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 599px) {
+  .InfoSection {
+    margin-left: 0%;
+  }
+  .Footer li {
+    height: 20px;
+    margin: 10px 0px;
+  }
+
+  .YandexAdnotation {
+    font-size: 10px;
+    margin-top: 0;
+  }
+
+  .Footer {
+    height: 30vmax;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .InfoSection {
+    margin-left: 5%;
+  }
+
+  .Footer li {
+    height: 20px;
+    margin: 10px 0px;
+  }
+
+  /* .YandexAdnotation {
+    font-size: 10px;
+    width: 50px;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .QuickNav {
+    margin-left: 10px;
+  }
+
+  .FooterContainer {
+    top: 90vh;
+  }
+
+  .Footer {
+    height: 30vh;
+  }
+
+  .FooterArrowCont {
+    height: 60px;
+  } */
 }
 
 /* Media queries */
