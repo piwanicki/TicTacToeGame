@@ -16,6 +16,7 @@
     <link href="add/sweetalert2.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
@@ -103,48 +104,49 @@
                 <p class="turn"></p>
             </div>
         </div>
+        <footer class='Footer'>
+            <div class='InfoSection'>
+                <h4>Info</h4>
+                <ul>
+                    <li class='GitIcon'>
+                        <a href="https://github.com/piwanicki/" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-github"></ion-icon>
+                            <p>Github</p>
+                        </a>
+                    </li>
+                    <li class='ContactIcon' onClick={this.props.showMailDialog}>
+                        <ion-icon name="mail"></ion-icon>
+                        <p>Contact Me</p>
+                    </li>
+                </ul>
+            </div>
+            <div class='QuickNav'>
+                <h4>Quick Nav</h4>
+                <ul>
+                    <li>
+                        <a href="http://paweliwanickiportfolio.dx.am/pl" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="home"></ion-icon>
+                            <p>Home</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='http://hangmantest.000webhostapp.com/'  target="_blank" rel="noopener noreferrer">
+                            <img src='images/hangTransparent.png' alt="hangman logo" />
+                            <p>Hangman</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    
+        <script src="game.js"></script>
+        <script src="add/sweetalert2.min.js"></script>
+    
     </div>
+    
     </div>
 
-    <footer class='Footer'>
-        <div class='InfoSection'>
-            <h4>Info</h4>
-            <ul>
-                <li class='GitIcon'>
-                    <a href="https://github.com/piwanicki/" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-github"></ion-icon>
-                        <p>Github</p>
-                    </a>
-                </li>
-                <li class='ContactIcon' onClick={this.props.showMailDialog}>
-                    <ion-icon name="mail"></ion-icon>
-                    <p>Contact Me</p>
-                </li>
-            </ul>
-        </div>
-        <div class='QuickNav'>
-            <h4>Quick Nav</h4>
-            <ul>
-                <li>
-                    <a href="http://paweliwanickiportfolio.dx.am/pl" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="home"></ion-icon>
-                        <p>Home</p>
-                    </a>
-                </li>
-                <li>
-                    <a href='http://hangmantest.000webhostapp.com/'  target="_blank" rel="noopener noreferrer">
-                        <img src='images/hangTransparent.png' alt="hangman logo" />
-                        <p>Hangman</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
-    <script src="game.js"></script>
-    <script src="add/sweetalert2.min.js"></script>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
+   
 </body>
 
 </html>
