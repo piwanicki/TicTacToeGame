@@ -38,6 +38,12 @@
     <link rel="stylesheet" href="css/12cols.css" media="all">
 
     <title>Kółko i krzyżyk</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_6TMxyFMGw4eVjipqsagoG");
+        })();
+    </script>
 </head>
 
 <body>
@@ -114,7 +120,7 @@
                             <p>Github</p>
                         </a>
                     </li>
-                    <li class='ContactIcon' onClick={this.props.showMailDialog}>
+                    <li class='ContactIcon'>
                         <ion-icon name="mail"></ion-icon>
                         <p>Contact Me</p>
                     </li>
@@ -130,7 +136,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href='http://hangmantest.000webhostapp.com/'  target="_blank" rel="noopener noreferrer">
+                        <a href='http://hangmantest.000webhostapp.com/' target="_blank" rel="noopener noreferrer">
                             <img src='images/hangTransparent.png' alt="hangman logo" />
                             <p>Hangman</p>
                         </a>
@@ -138,15 +144,35 @@
                 </ul>
             </div>
         </footer>
-    
-        <script src="game.js"></script>
-        <script src="add/sweetalert2.min.js"></script>
-    
-    </div>
-    
     </div>
 
-   
+    <form class='MailDialog Close'>
+        <div class='mailFormDiv'>
+
+
+            <div>
+                <input type="text" placeholder="Name" required id='nameInput' />
+                <input type="text" placeholder="Your email address" name="emailAddress" required id='emailInput' />
+                <ion-icon name="md-close" class='CancelIcon'></ion-icon>
+            </div>
+            <textarea placeholder="Type your message here..." name="message" required id='msgInput'
+                rows="15"></textarea>
+            <button type="button" class='SubmitButton'>
+                Send
+            </button>
+        </div>
+        </div>
+        <div class='StatusMail hidden'>
+            <p></p>
+        </div>
+        <div class='Loader hidden'></div>
+    </form>
+
+    <div class='Backdrop hidden'></div>
+
+    <script src="game.js"></script>
+    <script src="add/sweetalert2.min.js"></script>
+
 </body>
 
 </html>
