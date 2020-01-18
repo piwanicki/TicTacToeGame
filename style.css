@@ -237,20 +237,19 @@ header h1 {
 }
 
 .Footer li {
-  padding: 20px 0;
+  padding: 5px 0;
   white-space: nowrap;
   width: auto;
 }
 
 .InfoSection {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-left: 75%;
   height: 150px;
 }
 
 .QuickNav {
   margin-left: 60px;
-  margin-top: 20px;
   height: 150px;
 }
 
@@ -266,7 +265,7 @@ header h1 {
 }
 
 .ContactIcon {
-  transition: transform 0.5s;
+  transition: transform 0.5s
 }
 
 .ContactIcon:hover {
@@ -297,7 +296,7 @@ a:hover {
   color: inherit;
 }
 
-h4 {
+.Footer h4 {
   margin: 8px 10px;
   color: rgba(245, 245, 245, 0.795);
   font-family: "Dosis", sans-serif;
@@ -621,17 +620,6 @@ textarea {
     vertical-align: middle;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Loading Spinner  */
