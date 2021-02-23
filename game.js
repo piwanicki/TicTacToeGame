@@ -271,77 +271,77 @@ class Controller {
       })
     );
 
-    DOMStrings.openMailer.addEventListener("click", () => {
-      if (DOMStrings.mailDialog.className.includes("Close")) {
-        DOMStrings.mailDialog.classList.remove("Close");
-        DOMStrings.mailDialog.classList.add("Open");
-        DOMStrings.backdrop.classList.toggle("hidden");
-      } else {
-        DOMStrings.mailDialog.classList.remove("Open");
-        DOMStrings.mailDialog.classList.add("Close");
-      }
-    });
+    // DOMStrings.openMailer.addEventListener("click", () => {
+    //   if (DOMStrings.mailDialog.className.includes("Close")) {
+    //     DOMStrings.mailDialog.classList.remove("Close");
+    //     DOMStrings.mailDialog.classList.add("Open");
+    //     DOMStrings.backdrop.classList.toggle("hidden");
+    //   } else {
+    //     DOMStrings.mailDialog.classList.remove("Open");
+    //     DOMStrings.mailDialog.classList.add("Close");
+    //   }
+    // });
 
-    DOMStrings.closeMailer.addEventListener("click", () => {
-      DOMStrings.mailDialog.classList.remove("Open");
-      DOMStrings.mailDialog.classList.add("Close");
-      DOMStrings.backdrop.classList.toggle("hidden");
-    });
+    // DOMStrings.closeMailer.addEventListener("click", () => {
+    //   DOMStrings.mailDialog.classList.remove("Open");
+    //   DOMStrings.mailDialog.classList.add("Close");
+    //   DOMStrings.backdrop.classList.toggle("hidden");
+    // });
 
-    // DOMStrings.sendBtn.addEventListener('click', this.sendHandler())
-    DOMStrings.sendBtn.addEventListener("click", () => {
-      this.sendHandler();
-    });
+    // // DOMStrings.sendBtn.addEventListener('click', this.sendHandler())
+    // DOMStrings.sendBtn.addEventListener("click", () => {
+    //   this.sendHandler();
+    // });
 
-    DOMStrings.backdrop.addEventListener("click", () => {
-      DOMStrings.mailDialog.classList.remove("Open");
-      DOMStrings.mailDialog.classList.add("Close");
-      DOMStrings.backdrop.classList.toggle("hidden");
-    });
+    // DOMStrings.backdrop.addEventListener("click", () => {
+    //   DOMStrings.mailDialog.classList.remove("Open");
+    //   DOMStrings.mailDialog.classList.add("Close");
+    //   DOMStrings.backdrop.classList.toggle("hidden");
+    // });
   };
 
-  sendHandler = () => {
-    //paste to senFeedback (template , ...)
-    const templateId = "template_uMFom1rL";
+  // sendHandler = () => {
+  //   //paste to senFeedback (template , ...)
+  //   const templateId = "template_uMFom1rL";
 
-    const emailAddress = DOMStrings.emailAddressInput.value;
-    const message = DOMStrings.messageInput.value;
-    const name = DOMStrings.nameInput.value;
+  //   const emailAddress = DOMStrings.emailAddressInput.value;
+  //   const message = DOMStrings.messageInput.value;
+  //   const name = DOMStrings.nameInput.value;
 
-    if (emailAddress !== "" && message !== "" && name !== "") {
-      this.sendFeedback(templateId, {
-        message_html: message,
-        from_name: name,
-        from_email: emailAddress
-      });
-    }
-  };
+  //   if (emailAddress !== "" && message !== "" && name !== "") {
+  //     this.sendFeedback(templateId, {
+  //       message_html: message,
+  //       from_name: name,
+  //       from_email: emailAddress
+  //     });
+  //   }
+  // };
 
-  sendFeedback(templateId, variables) {
-    DOMStrings.mailFormDiv.classList.toggle("hidden");
-    DOMStrings.loadingSpinner.classList.toggle("hidden");
-    window.emailjs
-      .send("gmail", templateId, variables)
-      .then(res => {
-        DOMStrings.loadingSpinner.classList.toggle("hidden");
-        if (res.text === "OK") {
-          DOMStrings.mailStatusP.innerHTML = "Email send successfully!";
-          DOMStrings.mailStatus.classList.add("Green");
-          this.clearMailInputs();
-        }
-      })
-      .catch(error => {
-        console.log(error);
-        DOMStrings.mailStatusP.innerHTML =
-          "Something went wrong with sending email. Please try again... ;(";
-        DOMStrings.mailStatus.classList.add("Red");
-      });
-    DOMStrings.mailStatus.classList.toggle("hidden");
-    setTimeout(() => {
-      DOMStrings.mailFormDiv.classList.toggle("hidden");
-      DOMStrings.mailStatus.classList.toggle("hidden");
-    }, 3000);
-  }
+  // sendFeedback(templateId, variables) {
+  //   DOMStrings.mailFormDiv.classList.toggle("hidden");
+  //   DOMStrings.loadingSpinner.classList.toggle("hidden");
+  //   window.emailjs
+  //     .send("gmail", templateId, variables)
+  //     .then(res => {
+  //       DOMStrings.loadingSpinner.classList.toggle("hidden");
+  //       if (res.text === "OK") {
+  //         DOMStrings.mailStatusP.innerHTML = "Email send successfully!";
+  //         DOMStrings.mailStatus.classList.add("Green");
+  //         this.clearMailInputs();
+  //       }
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //       DOMStrings.mailStatusP.innerHTML =
+  //         "Something went wrong with sending email. Please try again... ;(";
+  //       DOMStrings.mailStatus.classList.add("Red");
+  //     });
+  //   DOMStrings.mailStatus.classList.toggle("hidden");
+  //   setTimeout(() => {
+  //     DOMStrings.mailFormDiv.classList.toggle("hidden");
+  //     DOMStrings.mailStatus.classList.toggle("hidden");
+  //   }, 3000);
+  // }
 
   static newGame = () => {
     DOMStrings.fields.forEach(el => (el.innerHTML = ""));
